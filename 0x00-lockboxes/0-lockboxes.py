@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+''' Module woks to see if a set of boxes can all be opened '''
 def canUnlockAll(boxes):
     ''' Will return true if all boxes can be opened. If not it wil return false '''
     avKeys = [0]
