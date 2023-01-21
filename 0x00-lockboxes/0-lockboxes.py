@@ -1,3 +1,4 @@
+#!usr/bin/python3
 def canUnlockAll(boxes):
     ''' Will return true if all boxes can be opened. If not it wil return false '''
     avKeys = [0]
