@@ -1,22 +1,21 @@
 #!/usr/bin/python3
-''' This module attempts to solve the Lockboxes problem '''
+''' Will solve lockbox to determine if all boxes can be opened '''
 
 
 def canUnlockAll(boxes):
-    ''' Returns True if all boxes can be opened, otherwise False '''
-    availableKeys = [0]
-    # Loop through availableKeys adding new keys as we go
-    for x in availableKeys:
+    ''' If all boxes can be opened then pass if not then fail '''
+    avKeys = [0]
+    # Will go through keys in boxes and add any new keys into the avKeys arrray.
+    for x in avKeys:
         for key in boxes[x]:
-            # Append key if it is within boxes range and not yet obtained
-            if key not in availableKeys and key < len(boxes):
-                availableKeys.append(key)
+            # Will add key to list if it is not in list and less than number of boxes
+            if key not in avKeys and key < len(boxes):
+                avKeys.append(key)
 
-    # If there are any numbers missing from availableKeys
-    # between 0 and length of boxes, return false
+
     x = 0
     while x < len(boxes):
-        if x not in availableKeys:
+        if x not in avKeys:
             return False
         x += 1
 
